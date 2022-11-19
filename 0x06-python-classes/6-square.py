@@ -47,7 +47,7 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = value
-    
+
     @property
     def position(self):
         """"
@@ -56,7 +56,7 @@ class Square:
         Return: position
         """
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """
@@ -90,4 +90,4 @@ class Square:
         print("\n" * self.__position[1], end="")
         print("\n".join([" " * self.__position[0] +
                         "#" * self.__size
-                        for rows in range(self.__size)]))
+                         for rows in range(self.__size)]))
