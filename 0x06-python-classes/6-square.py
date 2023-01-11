@@ -88,11 +88,15 @@ class Square:
             print()
             return
 
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
+        #print the position spaces
+        [print(" "*self.__position[0], end="") for i in range(0, self.__position[1])]
+
+        for _ in range(self.__position[1]):
+            print() # Print new line for each `self.__position[1]`
+        for i in range(self.__size):
+            print(" "*self.__position[0], end="")
             [print("#", end="") for k in range(0, self.__size)]
-            print("\n")
+            print("$")
 
 # my_square_1 = Square(3)
 # my_square_1.my_print()
