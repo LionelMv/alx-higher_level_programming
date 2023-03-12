@@ -1,13 +1,15 @@
 #include <Python.h>
 
-/*
-includes listobject.h
-VIEW HEADER-> https://github.com/python/cpython/blob/master/Include/listobject.h
-VIEW MANUAL-> https://docs.python.org/3.4/c-api/list.html
-includes object.h
-VIEW HEADER-> https://docs.python.org/3.4/c-api/structures.html)
-VIEW MANUAL-> https://github.com/python/cpython/blob/master/Include/object.h
-*/
+/**
+ * print_python_list_info - prints some basic info about pytohn list
+ * @p: python object
+ * includes listobject.h
+ * VIEW HEADER-> https://github.com/python/cpython/blob/master/Include/listobject.h
+ * VIEW MANUAL-> https://docs.python.org/3.4/c-api/list.html
+ * includes object.h
+ * VIEW HEADER-> https://docs.python.org/3.4/c-api/structures.html)
+ * VIEW MANUAL-> https://github.com/python/cpython/blob/master/Include/object.h
+**/
 
 void print_python_list_info(PyObject *p)
 {
