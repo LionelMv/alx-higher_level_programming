@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This module defines a square with private attribute size 
-and public attribute area
+This module defines a square with private attribute size
+    and public attribute area
 """
 
 
