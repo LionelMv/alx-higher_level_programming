@@ -83,8 +83,7 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """
-        Returns a # string representation of a rectangle."""
+        """Returns a # string representation of a rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ""
         rect_hashes = "\n".join(["#" * self.__width
