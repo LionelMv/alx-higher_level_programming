@@ -84,7 +84,8 @@ class Rectangle:
         """
         if self.__width == 0 or self.__height == 0:
             return ""
-        rect_hashes = "\n".join(["#" * self.__width for rows in range(self.__height)])
+        rect_hashes = "\n".join(["#" * self.__width
+                                for rows in range(self.__height)])
         return rect_hashes
 
 
