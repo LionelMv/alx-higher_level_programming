@@ -13,11 +13,11 @@ class LockedClass:
 
     __slots__ = "first_name"
 
-    def __init__(self, first):
-        """
-        Initializes the class to only instantiate first_name
+    # def __init__(self, first):
+    #     """
+    #     Initializes the class to only instantiate first_name
 
-        Args:
-        first_name (str)
-        """
-        self.first_name = first
+    #     Args:
+    #     first_name (str)
+    #     """
+    #     self.first_name = first
