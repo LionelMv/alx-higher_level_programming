@@ -1,14 +1,19 @@
 #!/usr/bin/python3
+"""
+Module: 0-add_integer
+Contains a function that returns an int sum of two ints/floats.
+"""
+
 
 def add_integer(a, b=98):
     """
     This function takes two numbers as input parameters and returns their sum.
     Args:
-        a (int or float): The first number to be added.
-        b (int or float, optional): The second number to be added. Default is 98.
+        a (int or float): The first parameter.
+        b (int or float, optional): The second parameter. Default is 98.
 
     Returns:
-        An int of sum of a and b
+        int: sum of a and b.
 
     Raises:
         TypeError: If either of `a` or `b` is not an integer or a float.
