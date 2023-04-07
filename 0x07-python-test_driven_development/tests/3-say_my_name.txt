@@ -6,27 +6,27 @@ First import method to test
 SUCCESS CASES:
 
 Test two strings given:
-     >>> say_my_name("First", "Middle Last")
-     My name is First Middle Last
+     >>> say_my_name("Lionel", "Mwas")
+     My name is Lionel Mwas
 
-     >>> say_my_name("Melissa")
-     My name is Melissa 
+     >>> say_my_name("Lionel")
+     My name is Lionel 
 
 FAIL CASES:
 
 Test other data types:
-     >>> say_my_name(123, "Last")
+     >>> say_my_name(123, "Mwas")
      Traceback (most recent call last):
      ...
      TypeError: first_name must be a string
 
-     >>> say_my_name("Melissa", ["Ng", "Hey"])
+     >>> say_my_name("Lionel", ["check", "mate"])
      Traceback (most recent call last):
      ...
      TypeError: last_name must be a string
 
 Test extra args:
-     >>> say_my_name("Melissa", "Ng", "extra")
+     >>> say_my_name("Lionel", "Mwangi", "mate")
      Traceback (most recent call last):
      ...
      TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
