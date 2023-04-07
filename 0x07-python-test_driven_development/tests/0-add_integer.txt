@@ -5,23 +5,23 @@ Import the module to test:
     >>> add_integer = __import__('0-add_integer').add_integer
     
 Test for signed and unsigned ints and floats:
-    >>> add_integer(2, 3)
-    5
-    >>> add_integer(-2, 3)
-    1
-    >>> add_integer(5)
-    103
-    >>> add_integer(1.5)
-    99
+    >>> add_integer(1, 3)
+    4
+    >>> add_integer(-2, 8)
+    6
+    >>> add_integer(2)
+    100
+    >>> add_integer(2.5)
+    100
     >>> add_integer(3, -5.5)
     -2
 
 Test for other data types:
-    >>> add_integer(3, "boy")
+    >>> add_integer(4, "School")
     Traceback (most recent call last):
      ...
     TypeError: b must be an integer
-    >>> add_integer("cat")
+    >>> add_integer("some")
     Traceback (most recent call last):
      ...
     TypeError: a must be an integer
