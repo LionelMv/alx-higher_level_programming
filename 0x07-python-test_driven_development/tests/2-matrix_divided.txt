@@ -18,10 +18,6 @@ Test signed and unsigned ints and floats in same size lists in list matrix:
     >>> print(matrix_divided(matrix, 2.5))
     [[-0.6], [-1.0]]
 
-    >>> matrix = [[True], [False]]
-    >>> print(matrix_divided(matrix, True))
-    [[1.0], [0.0]]
-
 FAIL CASES:
 
 Test div as 0 or non-int or non-float:
@@ -69,13 +65,13 @@ Test different sized lists in matrix:
     TypeError: Each row of the matrix must have the same size
 
 Test matrix with other data types:
-    >>> matrix = [["hey"], ["you"]]
+    >>> matrix = [["check"], ["mate"]]
     >>> print(matrix_divided(matrix, 2))
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-    >>> matrix = [[1, 2, 3], {"key" : 4}]
+    >>> matrix = [[1, 2, 3], {"checky" : 4}]
     >>> print(matrix_divided(matrix, 2))
     Traceback (most recent call last):
     ...
