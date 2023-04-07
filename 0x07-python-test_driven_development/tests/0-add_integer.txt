@@ -1,8 +1,8 @@
 # Run test with: python3 -m doctest -v ./tests/0-add_integer.txt
 
 Import the module to test:
-    add_integer = __import__('0-add_integer').add_integer
-    >>> from 0-add_integer import add_integer
+    from 0-add_integer import add_integer
+    >>> add_integer = __import__('0-add_integer').add_integer
     
 Test for signed and unsigned ints and floats:
     >>> add_integer(2, 3)
