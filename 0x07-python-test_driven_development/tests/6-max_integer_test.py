@@ -9,7 +9,6 @@ class TestMaxInteger(unittest.TestCase):
     """Define unittests for max_integer([..])."""
 
     def test_empty_list(self):
-        """Test an empty list"""
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(), None)
 
@@ -23,7 +22,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer("Lionel"), "o")
         self.assertEqual(max_integer("1234"), "4")
         self.assertEqual(max_integer(["a", "c", "x", "y"]), "y")
-        self.assertEqual(max_integer("abc", "q"), "q")
+        self.assertEqual(max_integer(["abc", "q"]), "q")
 
 
 if __name__ == "__main__":
