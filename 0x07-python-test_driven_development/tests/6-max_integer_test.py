@@ -13,6 +13,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(), None)
 
     def test_ints_and_floats(self):
+        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
         self.assertEqual(max_integer([1, 2, 3, -4]), 3)
         self.assertEqual(max_integer([-1.2, -2.2]), -1.2)
@@ -23,6 +24,14 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer("1234"), "4")
         self.assertEqual(max_integer(["a", "c", "x", "y"]), "y")
         self.assertEqual(max_integer(["abc", "q"]), "q")
+
+    def test_other_sequences(self):
+        with self.assertRaises(TypeError):
+            max_integer({1, 2}, {3, 4, 5})
+        with self.assertRaises(TypeError):
+            max_integer({1, 2, 3, 4, 5})
+        # with self.assertRaises(TypeError):
+        #     max_integer((1, 2, 3, 4))
 
 
 if __name__ == "__main__":
