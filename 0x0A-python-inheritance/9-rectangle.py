@@ -28,4 +28,3 @@ class Rectangle(BaseGeometry):
         """returns the print() and str() representation of a Rectangle"""
         return f"[{str(self.__class__.__name__)}] {self.__width}/"\
             f"{self.__height}"
-
