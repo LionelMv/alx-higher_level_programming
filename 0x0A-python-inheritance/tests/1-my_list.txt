@@ -5,7 +5,7 @@ case 0: import
 >>> MyList = __import__('1-my_list').MyList
 
 
-case 1: common cases
+case: common cases
 
     >>> my_list = MyList()
     >>> my_list.append(3)
@@ -20,15 +20,7 @@ case 1: common cases
     [3, 50, -1, 1]
 
 
-case 2: not defined object
-
-    >>> my_list2.print_sorted()
-    Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-    NameError: name 'my_list2' is not defined
-
-
-Case 3: passing a list
+Case: passing a list
 
     >>> a = [1, 9, 4]
     >>> my_list = MyList(a)
@@ -36,7 +28,7 @@ Case 3: passing a list
     [1, 4, 9]
 
 
-case 4: empty list
+case: empty list
 
     >>> a = []
     >>> my_list = MyList(a)
@@ -44,7 +36,7 @@ case 4: empty list
     []
 
 
-case 5: one element
+case: one element
 
     >>> my_list = MyList()
     >>> my_list.append(1)
