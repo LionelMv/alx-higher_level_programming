@@ -26,5 +26,11 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """returns the print() and str() representation of a Rectangle"""
-        return f"[{str(self.__class__.__name__)}] {self.__width}/\
-            {self.__height}"
+        return f"[{str(self.__class__.__name__)}] {self.__width}/"\
+            f"{self.__height}"
+
+
+r = Rectangle(3, 5)
+
+print(r)
+print(r.area())
