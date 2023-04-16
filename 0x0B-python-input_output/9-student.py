@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 11-student
+Module 9-student
 Represents student name and age.
 """
 
