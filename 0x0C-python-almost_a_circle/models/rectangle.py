@@ -98,3 +98,32 @@ class Rectangle(Base):
         """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return (f"[Rectangle] ({self.id}) "
                 f"{self.__x}/{self.__y} - {self.__width}/{self.__height}")
+
+    def update(self, *args, **kwargs):
+        """
+        If args: set attributes in this order: id, width, height, x, y
+        If no args given: set attributes according to kwargs
+        """
+        if args:
+            for k, v in enumerate(args):
+                if k == 0:
+                    self.id = v
+                elif k == 1:
+                    self.__width = v
+                elif k == 2:
+                    self.__height = v
+                elif k == 3:
+                    self.__x = v
+                else:
+                    self.__y = v
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.__width = kwargs["width"]
+            if "height" in kwargs:
+                self.__height = kwargs["height"]
+            if "x" in kwargs:
+                self.__x = kwargs["x"]
+            if "y" in kwargs:
+                self.__y = kwargs["y"]
