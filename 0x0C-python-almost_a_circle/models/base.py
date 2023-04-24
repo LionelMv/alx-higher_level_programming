@@ -3,6 +3,7 @@
 Module contains class Base.
 """
 import json
+import os
 
 
 class Base:
@@ -59,3 +60,16 @@ class Base:
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+        file_name = cls.__name__ + ".json"
+        list_instances = []
+
+        if os.path.exists(file_name):
+            with open(file_name, 'r') as f:
+                list_dicts = cls.from_json_string(f.read())
+            list_instances = [cls.create(**d_ict) for d_ict in list_dicts]
+
+        return list_instances
