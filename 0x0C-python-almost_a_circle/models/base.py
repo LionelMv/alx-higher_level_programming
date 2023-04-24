@@ -37,10 +37,10 @@ class Base:
         """Save json strings of all instances into file."""
         filename = cls.__name__ + ".json"
         with open(filename, "w") as f:
-            objs = []
+            list_dicts = []
             if list_objs is not None:
-                objs = [cls.to_dictionary(obj) for obj in list_objs]
-            f.write(cls.to_json_string(objs))
+                list_dicts = [cls.to_dictionary(obj) for obj in list_objs]
+            f.write(cls.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):
