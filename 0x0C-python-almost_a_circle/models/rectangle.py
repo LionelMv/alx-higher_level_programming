@@ -110,15 +110,15 @@ class Rectangle(Base):
         if args:
             for k, v in enumerate(args):
                 if k == 0:
-                    self.id = v
+                    self.id = args[0]
                 elif k == 1:
-                    self.__width = v
+                    self.__width = args[1]
                 elif k == 2:
-                    self.__height = v
+                    self.__height = args[2]
                 elif k == 3:
-                    self.__x = v
+                    self.__x = args[3]
                 else:
-                    self.__y = v
+                    self.__y = args[4]
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
