@@ -58,7 +58,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """Gets x"""
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -67,12 +67,12 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        self.x = value
+        self.__x = value
 
     @property
     def y(self):
         """Gets y"""
-        return self.y
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -81,7 +81,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
-        self.y = value
+        self.__y = value
 
     def area(self):
         """Returns area of the rectangle"""
@@ -95,7 +95,10 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        """Prints [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
+        """
+        String representation of
+        [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
         return (f"[Rectangle] ({self.id}) "
                 f"{self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
@@ -127,3 +130,13 @@ class Rectangle(Base):
                 self.__x = kwargs["x"]
             if "y" in kwargs:
                 self.__y = kwargs["y"]
+
+    def to_dictionary(self):
+        """Return dictionary representation of the rectangle."""
+        rect_dict = {}
+        rect_dict["id"] = self.id
+        rect_dict["width"] = self.width
+        rect_dict["height"] = self.height
+        rect_dict["x"] = self.x
+        rect_dict["y"] = self.y
+        return rect_dict
