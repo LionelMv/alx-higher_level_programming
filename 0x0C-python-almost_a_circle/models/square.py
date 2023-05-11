@@ -3,8 +3,8 @@
 Module contains class Square.
 The class inherits from Rectangle class.
 """
-
 from models.rectangle import Rectangle
+# from rectangle import Rectangle
 
 
 class Square(Rectangle):
