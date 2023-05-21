@@ -10,9 +10,9 @@
 -- can use only one SELECT statement
 -- the database name will be passed as an argument of the mysql command
 
-SELECT tv_genres.name AS genre, COUNT(*) AS 'number_shows'
-FROM tv_genres
+SELECT genre.name, COUNT(*) AS number_shows
+FROM tv_genres AS genre
 INNER JOIN tv_show_genres
-    ON tv_genres.id = tv_show_genres.genre_id
-GROUP BY genre
+    ON genre.id = tv_show_genres.genre_id
+GROUP BY genre.name
 ORDER BY number_shows DESC;
