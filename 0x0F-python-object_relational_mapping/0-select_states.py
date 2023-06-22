@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Returns all table values (table 'states')
+Returns all states in the database.
 Parameters given to script: username, password, database
 """
 
