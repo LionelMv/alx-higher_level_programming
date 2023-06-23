@@ -19,6 +19,6 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).order_by(State.id)
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    state_objs = session.query(State).order_by(State.id)
+    for obj in state_objs:
+        print(f"{obj.id}: {obj.name}")
