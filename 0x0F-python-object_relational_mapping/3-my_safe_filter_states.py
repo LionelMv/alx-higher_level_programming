@@ -16,7 +16,7 @@ if __name__ == "__main__":
                          port=3306,
                          user=argv[1],
                          password=argv[2],
-                         db=argv[3])
+                         database=argv[3])
 
     # create cursor to exec queries using SQL; match arg given
     cur = db.cursor()
