@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Prints state object with the name of state passed as an argument
-from the database.
+Adds the state Louisiana to the database.
 """
 
 from sys import argv
