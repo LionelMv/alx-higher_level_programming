@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Lists state objects containing letter 'a' from the database.
+Prints state object with the name of state passed as an argument
+from the database.
 """
 
 from sys import argv
@@ -18,8 +19,8 @@ if __name__ == "__main__":
     )
     Session = sessionmaker(bind=engine)
     session = Session()
-    state_objs = session.query(State).filter_by(name=argv[4]).first()
-    if state_objs:
-        print(f"{state_objs.id}")
+    state_obj = session.query(State).filter_by(name=argv[4]).first()
+    if state_obj:
+        print(f"{state_obj.id}")
     else:
         print("Not found")
