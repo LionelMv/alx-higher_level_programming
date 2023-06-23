@@ -23,6 +23,7 @@ if __name__ == "__main__":
     # query first python instance in database
     state_obj = session.query(State).order_by(State.id).first()
     if state_obj:
-        print("{:d}: {:s}".format(state_obj.id, state_obj.name))
+
+        print(f"{state_obj.id}: {state_obj.name}")
     else:
         print("Nothing")
