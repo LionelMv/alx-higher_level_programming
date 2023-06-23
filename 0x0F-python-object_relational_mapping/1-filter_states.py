@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-return states starting with 'N'
+Returns states starting with 'N'
 parameters given to script: username, password, database
 """
 
@@ -24,5 +24,6 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
+    #  clean up
     cur.close()
     db.close()
