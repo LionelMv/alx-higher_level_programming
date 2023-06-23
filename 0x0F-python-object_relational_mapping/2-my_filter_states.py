@@ -25,7 +25,7 @@ if __name__ == '__main__':
     cur.execute(
         """SELECT *
             FROM states
-            WHERE name LIKE '{:s}'
+            WHERE name LIKE BINARY '{}'
             ORDER BY id ASC""".format(argv[4])
     )
 
