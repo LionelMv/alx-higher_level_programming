@@ -21,8 +21,13 @@ if __name__ == "__main__":
     session = Session()
 
     # creates a tuple
-    city_query = session.query(State.name, City.id, City.name).\
-        filter(City.state_id == State.id).all()
+    # One implementation
+    # city_query = session.query(State.name, City.id, City.name).\
+    #     filter(City.state_id == State.id).all()
 
-    for city in city_query:
-        print(f"{city[0]}: ({city[1]}) {city[2]}")
+    # for city in city_query:
+    #     print(f"{city[0]}: ({city[1]}) {city[2]}")
+    cities = session.query(City).join(State).order_by(City.id).all()
+
+    for city in cities:
+        print('{}: ({}) {}'.format(city.state.name, city.id, city.name))
