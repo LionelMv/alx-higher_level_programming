@@ -21,6 +21,6 @@ if __name__ == "__main__":
     session = Session()
     state_obj = session.query(State).filter_by(State.name == argv[4]).first()
     if state_obj:
-        print(f"{state_obj.id}")
+        print(state_obj.id)
     else:
         print("Not found")
