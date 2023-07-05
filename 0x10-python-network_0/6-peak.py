@@ -10,7 +10,7 @@ def find_peak(list_of_integers):
     """
     if list_of_integers == []:
         return None
-    peak = float("-inf")
+    peak = list_of_integers[0]
     for num in list_of_integers:
         if num >= peak:
             peak = num
