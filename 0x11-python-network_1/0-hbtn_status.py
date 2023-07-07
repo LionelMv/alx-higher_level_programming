@@ -6,7 +6,7 @@ fetch https://intranet.hbtn.io/status; display response
 from urllib.request import urlopen
 
 if __name__ == "__main__":
-    with urlopen('https://intranet.hbtn.io/status') as response:
+    with urlopen('https://alx-intranet.hbtn.io/status') as response:
         html = response.read()
         print('Body response:')
         print(f"\t- type: {type(html)}")
