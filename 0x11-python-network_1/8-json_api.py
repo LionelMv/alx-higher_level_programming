@@ -25,3 +25,11 @@ if __name__ == "__main__":
                 print(f"[{json_dic['id']}] {json_dic['name']}")
         else:
             print("No result")
+    # try:
+    #     json_dic = r.json()
+    #     if json_dic:
+    #         print("[{}] {}".format(json_dic.get('id'), json_dic.get('name')))
+    #     else:
+    #         print("No result")
+    # except ValueError as e:
+    #     print("Not a valid JSON")
