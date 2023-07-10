@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-given repo and owner name as argvs, 
-use Github API (documentation in  documentation https://developer.github.com/v3/repos/commits/) 
-to list last 10 commits
-usage: ./100-github_commits.py [github_repo] [github_owner]
+Given repo and owner name as argvs,
+use Github API (documentation in documentation
+https://developer.github.com/v3/repos/commits/)
+to list last 10 commits.
+Usage: ./100-github_commits.py [github_repo] [github_owner]
 """
 from sys import argv
 import requests
